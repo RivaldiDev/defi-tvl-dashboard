@@ -26,8 +26,6 @@ DeFi protocol analytics dashboard showing Total Value Locked across 200+ protoco
 
 Built with **Next.js 16** (App Router, TypeScript), **shadcn/ui** component library, **Tailwind CSS**, and **Framer Motion** for animations. All data is fetched client-side from free public APIs — no API keys required, no backend server.
 
-This project was developed using AI Agent tools (**Claude Code**, **Hermes Agent**) as part of the **Xiaomi MiMo 100T Token Creator** program.
-
 ## Features
 
 | Area | What it does |
@@ -84,8 +82,14 @@ src/
 │   ├── page.tsx          # Main dashboard page (client component)
 │   └── globals.css       # Tailwind CSS globals
 ├── components/
+│   ├── header.tsx        # Sticky header with branding
+│   ├── stat-card.tsx     # Stat card with trend indicator
+│   ├── category-tabs.tsx # Filter tabs for protocol categories
+│   ├── protocol-table.tsx# Protocol ranking table
 │   └── ui/               # shadcn/ui components (Card, Badge, etc.)
 └── lib/
+    ├── api.ts            # API fetch functions with caching
+    ├── types.ts          # TypeScript types and category helpers
     └── utils.ts          # Utility functions (cn helper)
 ```
 
@@ -101,8 +105,6 @@ npx vercel --prod
 ---
 
 <div align="center">
-
-**Built with AI Agent tools** · Xiaomi MiMo 100T Token Creator Program
 
 ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
